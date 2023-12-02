@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buscador de Vuelos</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;500;700;900&family=Quicksand:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+</head>
+
+<body>
+    <main>
+        <div class="container">
+            <h1>Buscador de Vuelos</h1>
+            <form id="flightSearchForm">
+                <label for="departureDate">Fecha de salida:</label>
+                <input type="date" id="departureDate" required>
+
+                <label for="origin">Origen:</label>
+                <input type="text" id="origin" placeholder="Ciudad de origen" required>
+
+                <label for="destination">Destino:</label>
+                <input type="text" id="destination" placeholder="Ciudad de destino" required>
+
+                <button type="button" id="searchFlightsButton">Buscar Vuelos</button>
+
+                <button type="button" id="reset">Limpiar Cotización</button>
+
+                <button id="showCartButton" type="button" display: none;>Mostrar Cotización</button>
+            </form>
+        </div>
+        <div class="resultadoGeneral">
+            <div id="results" class="resultados2"></div>
+        </div>
+    </main>
+    <aside id="shoppingCart" class="carrito">
+        <p id="cartItems"></p>
+        <div id="cartDetails"></div>
+        <div id="cartDetailsContent"></div>
+    </aside>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <script src="./main.js"></script>
+</body>
+
+</html>
